@@ -1,0 +1,24 @@
+<nav>
+  <ul class="nav-links">
+    <li><a routerLink="favo">Favorites</a></li>
+  </ul>
+  <form [formGroup]="searchForm">
+    <input matInput placeholder="Recipe" formControlName="searchField" />
+    <br />
+  </form>
+  <div *ngIf="!show">
+    <ul *ngFor="let r of allRec">
+      <li>
+        <app-recipecard [recipe]="r"></app-recipecard>
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="show">
+    <ul *ngFor="let r of reciepes">
+      <li>{{ r.name }}</li>
+      <!-- <li>{{ r.id }}</li> -->
+      <app-recipecard [recipe]="r"></app-recipecard>
+    </ul>
+  </div>
+</nav>
+<router-outlet></router-outlet>

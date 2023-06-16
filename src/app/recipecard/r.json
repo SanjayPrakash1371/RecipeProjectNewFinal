@@ -1,0 +1,47 @@
+[
+  {
+    "id": "99",
+    "name": "tomato rice",
+    "ingredients": "tomato,rice",
+    "imglink": "https://th.bing.com/th/id/R.b483a4b2a3ec58248e3045322615ff9a?rik=C%2fzjZRLzn87svg&riu=http%3a%2f%2fonedaycart.com%2fodcb%2fwp-content%2fuploads%2f2016%2f04%2fmaxresdefault1.jpg&ehk=2p0ZrfvEsujXDC35DaO5wmb3qPgBGimBrWk68DL%2bYg8%3d&risl=&pid=ImgRaw&r=0",
+    "instructions": "Wash and drain the basmati rice and soak for about 20 minutes. Take a deep pan, put it on medium flame and pour water into it. Bring it to a boil, and then add the soaked rice. Cover the pan with a lid and cook on medium flame till the rice becomes soft, but not mushy",
+    "servingsize": 2,
+    "preptime": 30
+  },
+  {
+    "id": "100",
+    "name": "tomato curry",
+    "ingredients": "tomato,rice,veg",
+    "imglink": "https://onedaycart.com/odcb/wp-content/uploads/2015/10/maxresdefault1.jpg",
+    "instructions": "Wash and drain the basmati rice and soak for about 20 minutes. Take a deep pan, put it on medium flame and pour water into it. Bring it to a boil, and then add the soaked rice. Cover the pan with a lid and cook on medium flame till the rice becomes soft, but not mushy",
+    "servingsize": 3,
+    "preptime": 20
+  },
+  {
+    "id": "101",
+    "name": "omlet",
+    "ingredients": "egg,chilly",
+    "imglink": "https://th.bing.com/th?id=OIP.HzZfJtHX7io3TfINMlR0vAHaGh&w=266&h=234&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2",
+    "instructions": "Wash and drain the basmati rice and soak for about 20 minutes. Take a deep pan, put it on medium flame and pour water into it. Bring it to a boil, and then add the soaked rice. Cover the pan with a lid and cook on medium flame till the rice becomes soft, but not mushy",
+    "servingsize": 3,
+    "preptime": 20
+  },
+  {
+    "id": "102",
+    "name": "Noodles",
+    "ingredients": "egg,maggi",
+    "imglink": "https://th.bing.com/th?id=OIP.Sb_e1OqhvwrBftVMe0NF7AHaJ4&w=216&h=288&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2",
+    "instructions": "Wash and drain the basmati rice and soak for about 20 minutes. Take a deep pan, put it on medium flame and pour water into it. Bring it to a boil, and then add the soaked rice. Cover the pan with a lid and cook on medium flame till the rice becomes soft, but not mushy",
+    "servingsize": 3,
+    "preptime": 20
+  },
+  {
+    "id": "103",
+    "name": "Egg Gravy",
+    "ingredients": "egg",
+    "imglink": "https://th.bing.com/th/id/OIP.QIdDULbge_YDvlkBCLhNggHaHa?w=180&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+    "instructions": "Wash and drain the basmati rice and soak for about 20 minutes. Take a deep pan, put it on medium flame and pour water into it. Bring it to a boil, and then add the soaked rice. Cover the pan with a lid and cook on medium flame till the rice becomes soft, but not mushy",
+    "servingsize": 3,
+    "preptime": 20
+  }
+]

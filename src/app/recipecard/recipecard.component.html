@@ -1,0 +1,8 @@
+<div class="movie-container">
+  <img class="movie-poster" [src]="recipe.imglink" [alt]="recipe.name" />
+  <div class="movie-spec">
+    <h2>{{ recipe.name }}</h2>
+    <p>⭐ {{ recipe.instructions }}</p>
+    <button (click)="details(recipe.id)">Details</button>
+  </div>
+</div>
