@@ -55,4 +55,5 @@ export class HomeComponentComponent {
       ` https://648a951717f1536d65e94e9e.mockapi.io/recieps?ingredients=${receipe}`
     );
   }
+  addToFav(val: any) {}
 }
