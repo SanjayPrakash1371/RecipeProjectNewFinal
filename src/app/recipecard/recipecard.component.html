@@ -1,11 +1,32 @@
-<div class="movie-container">
-  <img class="movie-poster" [src]="recipe.imglink" [alt]="recipe.name" />
-  <div class="movie-spec">
-    <h2>{{ recipe.name }}</h2>
+<div class="recipe-container">
+  <img class="recipe-poster" [src]="recipe.imglink" [alt]="recipe.name" />
+  <div class="recipe-spec">
+    <h2>{{ recipe.name | uppercase }}</h2>
     <!-- <p>⭐ {{ recipe.instructions }}</p> -->
-    <button (click)="details(recipe.id)">Details</button>
-    <button (click)="addToFav(recipe)">Fav</button>
-    <button (click)="edit(recipe.id)">Edit</button>
-    <button (click)="deleteRecipe(recipe.id)">Delete</button>
+  </div>
+  <div class="recipe-spec">
+    <button mat-raised-button type="button" (click)="details(recipe.id)">
+      Details
+    </button>
+    <button
+      mat-raised-button
+      color="primary"
+      type="button"
+      [disabled]="fav"
+      (click)="addToFav(recipe)"
+    >
+      <mat-icon>favorite</mat-icon>Favorite
+    </button>
+    <button mat-raised-button type="button" (click)="edit(recipe.id)">
+      Edit
+    </button>
+    <button
+      mat-raised-button
+      color="primary"
+      type="button"
+      (click)="deleteRecipe(recipe.id)"
+    >
+      <mat-icon>delete</mat-icon>Delete
+    </button>
   </div>
 </div>

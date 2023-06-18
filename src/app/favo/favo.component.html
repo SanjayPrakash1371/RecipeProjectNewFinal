@@ -1,7 +1,37 @@
-<div *ngFor="let recipe of all" class="movie-container">
-  <img class="movie-poster" [src]="recipe.imglink" [alt]="recipe.name" />
-  <div class="movie-spec">
-    <h2>{{ recipe.name }}</h2>
-    <p>⭐ {{ recipe.instructions }}</p>
+<div>
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <h1 style="margin: 0 auto">Favorites</h1>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>
+
+<div class="allRec">
+  <div *ngFor="let reciepe of all">
+    <div class="recipe-container">
+      <img class="recipe-poster" [src]="reciepe.imglink" [alt]="reciepe.name" />
+      <div class="recipe-spec">
+        <h2>{{ reciepe.name | uppercase }}</h2>
+        <!-- <p>⭐ {{ recipe.instructions }}</p> -->
+      </div>
+      <div class="recipe-spec">
+        <button
+          mat-stroked-button
+          color="primary"
+          type="button"
+          (click)="details(reciepe.id)"
+        >
+          Details
+        </button>
+        <button
+          mat-stroked-button
+          color="primary"
+          type="button"
+          (click)="deleteFromFav(reciepe)"
+        >
+          Delete
+        </button>
+      </div>
+    </div>
   </div>
 </div>

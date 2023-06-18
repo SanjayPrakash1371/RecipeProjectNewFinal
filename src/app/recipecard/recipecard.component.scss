@@ -1,34 +1,27 @@
-.movie-container {
-    background: rgb(237, 235, 231); 
+.recipe-container {
+    background: rgb(192, 221, 230); 
    width: 400px;
    border-radius: 16px;
    overflow: hidden;
    padding: 16px;
  }
  
- .movie-poster {
+ .recipe-poster {
    height: 450px;
    object-fit: cover;
    width: 100%;
  
     border-radius: 17px; 
  }
- .movie-spec {
+ .recipe-spec {
    display: flex;
    align-items: center;
    justify-content: space-between;
  }
  
  /* Child selector - combinators */
- .movie-spec > p {
-   font-size: 22px;
-   font-weight: bold;
- }
+
  
- .movie-summary {
-   margin-top: 0px;
-   color: #7c6e6e;
- }
 // [
 //     {
 //     "id": "99",

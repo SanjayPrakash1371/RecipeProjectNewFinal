@@ -1,3 +1,11 @@
+<div>
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <h1 style="margin: 0 auto">Add New Recipe</h1>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>
+
 <form [formGroup]="recipeForm" class="example-form" (ngSubmit)="onSubmit()">
   <div>
     <mat-form-field class="example-full-width">
@@ -29,7 +37,12 @@
   <div>
     <mat-form-field class="example-full-width">
       <mat-label>Preptime</mat-label>
-      <input matInput placeholder="Preptime" formControlName="preptime" />
+      <input
+        type="number"
+        matInput
+        placeholder="Preptime in mins"
+        formControlName="preptime"
+      />
       <mat-error *ngIf="preptime?.hasError('required')">Required</mat-error>
     </mat-form-field>
   </div>

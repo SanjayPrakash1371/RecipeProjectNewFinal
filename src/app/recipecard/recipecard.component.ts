@@ -28,7 +28,10 @@ export class RecipecardComponent {
     console.log(id);
     this.router.navigate([`/recipe/${id}`]);
   }
+  fav: boolean = false;
   addToFav(val: any) {
+    // alert('Added to Fav');
+    this.fav = true;
     this.reciepeService.addToFav(val);
   }
 
