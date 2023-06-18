@@ -5,6 +5,11 @@
     </mat-toolbar-row>
   </mat-toolbar>
 </div>
+<div *ngIf="allLength == 0" style="text-align: center">
+  <span style="color: rgb(15, 26, 185); font-weight: bold; font-size: larger"
+    >Favorites Empty..!</span
+  >
+</div>
 
 <div class="allRec">
   <div *ngFor="let reciepe of all">
@@ -15,16 +20,11 @@
         <!-- <p>⭐ {{ recipe.instructions }}</p> -->
       </div>
       <div class="recipe-spec">
-        <button
-          mat-stroked-button
-          color="primary"
-          type="button"
-          (click)="details(reciepe.id)"
-        >
+        <button mat-raised-button type="button" (click)="details(reciepe.id)">
           Details
         </button>
         <button
-          mat-stroked-button
+          mat-raised-button
           color="primary"
           type="button"
           (click)="deleteFromFav(reciepe)"

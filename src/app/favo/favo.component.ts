@@ -10,6 +10,7 @@ export class FavoComponent {
   constructor(private rec: ReciepeServiceService, private router: Router) {}
 
   all = this.rec.Fav;
+  allLength = this.all.length;
 
   details(id: string) {
     console.log(id);
