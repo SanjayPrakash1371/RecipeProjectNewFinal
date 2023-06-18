@@ -1,47 +1,129 @@
 [
   {
-    "id": "99",
-    "name": "tomato rice",
-    "ingredients":["tomato,rice"] ,
-    "imglink": "https://th.bing.com/th/id/R.b483a4b2a3ec58248e3045322615ff9a?rik=C%2fzjZRLzn87svg&riu=http%3a%2f%2fonedaycart.com%2fodcb%2fwp-content%2fuploads%2f2016%2f04%2fmaxresdefault1.jpg&ehk=2p0ZrfvEsujXDC35DaO5wmb3qPgBGimBrWk68DL%2bYg8%3d&risl=&pid=ImgRaw&r=0",
-    "instructions": "Wash and drain the basmati rice and soak for about 20 minutes. Take a deep pan, put it on medium flame and pour water into it. Bring it to a boil, and then add the soaked rice. Cover the pan with a lid and cook on medium flame till the rice becomes soft, but not mushy",
-    "servingsize": 2,
-    "preptime": 30
+   "id": "99",
+   "name": "tomato rice",
+   "ingredients": [
+    "tomato",
+    "Rice",
+    "Onion",
+    "Chilly"
+   ],
+   "imglink": "https://th.bing.com/th/id/R.b483a4b2a3ec58248e3045322615ff9a?rik=C%2fzjZRLzn87svg&riu=http%3a%2f%2fonedaycart.com%2fodcb%2fwp-content%2fuploads%2f2016%2f04%2fmaxresdefault1.jpg&ehk=2p0ZrfvEsujXDC35DaO5wmb3qPgBGimBrWk68DL%2bYg8%3d&risl=&pid=ImgRaw&r=0",
+   "instructions": "Wash and drain the basmati rice and soak for about 20 minutes. Take a deep pan, put it on medium flame and pour water into it. Bring it to a boil, and then add the soaked rice. Cover the pan with a lid and cook on medium flame till the rice becomes soft, but not mushy",
+   "servingsize": 2,
+   "preptime": 30,
+   "servingssize": "2"
   },
   {
-    "id": "100",
-    "name": "tomato curry",
-    "ingredients": ["tomato","rice","veg"],
-    "imglink": "https://onedaycart.com/odcb/wp-content/uploads/2015/10/maxresdefault1.jpg",
-    "instructions": "Wash and drain the basmati rice and soak for about 20 minutes. Take a deep pan, put it on medium flame and pour water into it. Bring it to a boil, and then add the soaked rice. Cover the pan with a lid and cook on medium flame till the rice becomes soft, but not mushy",
-    "servingsize": 3,
-    "preptime": 20
+   "id": "100",
+   "name": "tomato curry",
+   "ingredients": [
+    "tomato",
+    "rice",
+    "veg"
+   ],
+   "imglink": "https://onedaycart.com/odcb/wp-content/uploads/2015/10/maxresdefault1.jpg",
+   "instructions": "Wash and drain the basmati rice and soak for about 20 minutes. Take a deep pan, put it on medium flame and pour water into it. Bring it to a boil, and then add the soaked rice. Cover the pan with a lid and cook on medium flame till the rice becomes soft, but not mushy",
+   "servingsize": 3,
+   "preptime": 20
   },
   {
-    "id": "101",
-    "name": "omlet",
-    "ingredients": ["egg","chilly"],
-    "imglink": "https://th.bing.com/th?id=OIP.HzZfJtHX7io3TfINMlR0vAHaGh&w=266&h=234&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2",
-    "instructions": "Wash and drain the basmati rice and soak for about 20 minutes. Take a deep pan, put it on medium flame and pour water into it. Bring it to a boil, and then add the soaked rice. Cover the pan with a lid and cook on medium flame till the rice becomes soft, but not mushy",
-    "servingsize": 3,
-    "preptime": 20
+   "id": "101",
+   "name": "omlet",
+   "ingredients": [
+    "egg",
+    "chilly"
+   ],
+   "imglink": "https://th.bing.com/th?id=OIP.HzZfJtHX7io3TfINMlR0vAHaGh&w=266&h=234&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2",
+   "instructions": "Wash and drain the basmati rice and soak for about 20 minutes. Take a deep pan, put it on medium flame and pour water into it. Bring it to a boil, and then add the soaked rice. Cover the pan with a lid and cook on medium flame till the rice becomes soft, but not mushy",
+   "servingsize": 3,
+   "preptime": 20
   },
   {
-    "id": "102",
-    "name": "Noodles",
-    "ingredients": ["egg","maggi"],
-    "imglink": "https://th.bing.com/th?id=OIP.Sb_e1OqhvwrBftVMe0NF7AHaJ4&w=216&h=288&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2",
-    "instructions": "Wash and drain the basmati rice and soak for about 20 minutes. Take a deep pan, put it on medium flame and pour water into it. Bring it to a boil, and then add the soaked rice. Cover the pan with a lid and cook on medium flame till the rice becomes soft, but not mushy",
-    "servingsize": 3,
-    "preptime": 20
+   "id": "102",
+   "name": "Noodles",
+   "ingredients": [
+    "egg",
+    "Maggi",
+    "Tomato",
+    "Onion"
+   ],
+   "imglink": "https://th.bing.com/th/id/OIP.OphxGNZAIpgGbejFria89AHaLH?w=202&h=303&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+   "instructions": "Wash and drain the basmati rice and soak for about 20 minutes. Take a deep pan, put it on medium flame and pour water into it. Bring it to a boil, and then add the soaked rice. Cover the pan with a lid and cook on medium flame till the rice becomes soft, but not mushy",
+   "servingsize": 3,
+   "preptime": 20,
+   "servingssize": "2"
   },
   {
-    "id": "103",
-    "name": "Egg Gravy",
-    "ingredients": ["egg"],
-    "imglink": "https://th.bing.com/th/id/OIP.QIdDULbge_YDvlkBCLhNggHaHa?w=180&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
-    "instructions": "Wash and drain the basmati rice and soak for about 20 minutes. Take a deep pan, put it on medium flame and pour water into it. Bring it to a boil, and then add the soaked rice. Cover the pan with a lid and cook on medium flame till the rice becomes soft, but not mushy",
-    "servingsize": 3,
-    "preptime": 20
-  }
-]
+   "ingredients": [
+    "panner",
+    "butter",
+    "masala"
+   ],
+   "imglink": "https://th.bing.com/th/id/OIP.rVj6abDgNNpQ3fx5DTApvwHaLH?w=202&h=303&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+   "instructions": "Paneer Butter Masala Recipe is one of India’s most popular paneer preparation.",
+   "servingsize": "servingsize 104",
+   "preptime": "20",
+   "id": "104",
+   "name": "Panner Butter Masala",
+   "servingssize": "2"
+  },
+  {
+   "ingredients": [
+    "Veggies"
+   ],
+   "imglink": "https://th.bing.com/th/id/OIP.SxBvOeoAfJk9lVfqjZoL-QHaJ0?w=202&h=267&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+   "instructions": "Fried rice is a tasty dish that is traditionally made from steamed rice stir-fried in a wok, but it can also be made in a pan.Fried rice is delicious with a variety of ingredients, including almost any type of vegetables, meat, and eggs.",
+   "servingsize": "servingsize 109",
+   "preptime": 20,
+   "id": "109",
+   "name": "Fried Rice",
+   "servingssize": "2"
+  },
+  {
+   "ingredients": [
+    "Chicken",
+    "Rice",
+    "Salt",
+    "Egg",
+    "Oil"
+   ],
+   "imglink": "https://th.bing.com/th/id/OIP.foSWCBsiSQym4ehEoExeLQHaKo?w=202&h=290&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+   "instructions": " Prepare the chicken. Remove the neck and organs from the cavity if they are present. You can either add the neck and gizzards in with the water to cook the chicken, or you can use them in another stock later.Boil the chicken with the vegetables. Place the whole chicken in a large stockpot along with the celery, onion, oregano, celery salt, and water. Add half the pepper, half the salt, and 1 teaspoon (5 g) of the parsley. Reserve the remaining herbs and spices for later.",
+   "servingsize": "servingsize 112",
+   "preptime": 30,
+   "id": "112",
+   "name": "Chicken Rice",
+   "servingssize": "2"
+  },
+  {
+    "ingredients": [
+     "Cocunt",
+     "Chilly",
+     "Salt"
+    ],
+    "imglink": "https://www.holidify.com/blog/wp-content/uploads/2015/11/640px-Coconut_Chutney.jpg",
+    "instructions": " It is made with grounded coconut, dry red chilly (particularly roasted red chilly) ginger, mustard seed and served cold along with the dishes such as Dosa, Idli, Vada. It tastes delicious and the coconut gives it a flavour that perfectly balances out with all the other dishes.",
+    "servingsize": "servingsize 122",
+    "preptime": 10,
+    "id": "122",
+    "name": "Cocunt Chutney",
+    "servingssize": "2"
+   },
+   {
+    "ingredients": [
+     "Rice ",
+     "dhal",
+     "salt"
+    ],
+    "imglink": "https://www.holidify.com/blog/wp-content/uploads/2015/11/A_banana_leaf_with_Tamil_bites_-_Murukku.jpg",
+    "instructions": "the batter for the murukku is made by a mixture of rice flour and urad dal with some salt, water, cumin seed etc. It is then deep-fried in oil in various shapes until it turns hard. It is loved by people all over India.",
+    "servingsize": "servingsize 121",
+    "preptime": 30,
+    "id": "121",
+    "name": "Murruku",
+    "servingssize": "2"
+   }
+    
+  
+ ]

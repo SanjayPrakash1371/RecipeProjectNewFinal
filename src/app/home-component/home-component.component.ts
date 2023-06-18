@@ -31,6 +31,7 @@ export class HomeComponentComponent {
 
   show = false;
   allRec$: any;
+  length = false;
   ngOnInit() {
     this.allRec$ = this.http.get(
       `https://648a951717f1536d65e94e9e.mockapi.io/recieps`
@@ -47,6 +48,12 @@ export class HomeComponentComponent {
       .subscribe((val: any) => {
         this.show = true;
         this.reciepes = val;
+        //console.log(this.reciepes.length);
+        if (this.reciepes.length == 0) {
+          this.length = !this.length;
+        } else {
+          this.length = false;
+        }
         //  console.log(val);
         //  console.log(this.reciepes);
       });
@@ -64,12 +71,17 @@ export class HomeComponentComponent {
   }
 
   deleteReciepe(id: string) {
-    this.allRec$ = this.rec.delete(id).subscribe(() => {
-      this.http
-        .get(`https://648a951717f1536d65e94e9e.mockapi.io/recieps`)
-        .subscribe((val) => {
-          //this.allRec = val;
-        });
+    console.log('In delete', id);
+    // this.allRec$ = this.rec.delete(id).subscribe(() => {
+    //   this.http
+    //     .get(`https://648a951717f1536d65e94e9e.mockapi.io/recieps`)
+    //     .subscribe((val) => {
+    //       //this.allRec = val;
+    //     });
+    // });
+    // this.allRec$ = this.rec.delete(id).subscribe();
+    this.rec.delete(id).subscribe(() => {
+      this.allRec$ = this.rec.get();
     });
   }
 }

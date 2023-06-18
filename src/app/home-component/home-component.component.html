@@ -8,8 +8,12 @@
         </ul> -->
 
         <div>
-          <a mat-button [routerLink]="'add'"> Add Reciepe </a>
-          <a mat-button [routerLink]="'favo'"> View Favorites </a>
+          <a mat-button [routerLink]="'add'" style="font-size: 18px">
+            Add Reciepe
+          </a>
+          <a mat-button [routerLink]="'favo'" style="font-size: 18px">
+            View Favorites
+          </a>
         </div>
       </mat-toolbar-row>
     </mat-toolbar>
@@ -39,6 +43,9 @@
         *ngFor="let r of reciepes"
         [recipe]="r"
       ></app-recipecard>
+    </div>
+    <div *ngIf="length">
+      <h1>Not Recipes Found</h1>
     </div>
   </div>
 </div>
