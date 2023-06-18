@@ -31,7 +31,9 @@ export class RecipecardComponent {
   fav: boolean = false;
   addToFav(val: any) {
     // alert('Added to Fav');
-    this.fav = true;
+
+    // console.log(this.reciepeService.Fav.indexOf(val));
+    this.fav = !this.fav;
     this.reciepeService.addToFav(val);
   }
 

@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { catchError, pipe } from 'rxjs';
+import { ReciepeServiceService } from '../reciepe-service.service';
 interface Recipe {
   id: string;
   name: string;
@@ -20,7 +21,8 @@ export class ReciepeDetailsComponent {
   constructor(
     private http: HttpClient,
     private router: Router,
-    private arouter: ActivatedRoute
+    private arouter: ActivatedRoute,
+    private reciepeService: ReciepeServiceService
   ) {}
   recipe: any;
   imgSrc: string = '';
@@ -51,5 +53,15 @@ export class ReciepeDetailsComponent {
           // this.imgSrc = this.recipe['img'];
         });
     });
+  }
+
+  fav: boolean = false;
+  addToFav(val: any) {
+    // alert('Added to Fav');
+    this.fav = true;
+    this.reciepeService.addToFav(val);
+  }
+  edit(id: string) {
+    this.router.navigate([`/edit/${id}`]);
   }
 }

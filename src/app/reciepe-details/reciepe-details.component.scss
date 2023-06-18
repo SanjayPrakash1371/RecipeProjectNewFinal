@@ -1,5 +1,6 @@
 .movie-container {
-    background: rgb(237, 235, 231); 
+  background-color: rgb(219, 227, 234);
+
    width: 400px;
    border-radius: 16px;
    overflow: hidden;
@@ -10,12 +11,21 @@
    height: 450px;
    object-fit: cover;
    width: 700px;
-   margin-left: 50px;
+  //  margin-left: 20px;
    padding: 10px;
   
 
    
     border-radius: 17px; 
+ }
+ .buttons-spec{
+  display: grid;
+  align-items: center;
+   justify-content: space-between;
+   gap:24px;
+   padding-top: 10px;
+
+   margin-left: 20px;
  }
  
  .recipe-spec {

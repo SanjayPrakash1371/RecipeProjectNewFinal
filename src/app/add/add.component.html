@@ -50,8 +50,8 @@
   <div formArrayName="ingredients">
     <div *ngFor="let ingredient of ingredientsControls; let i = index">
       <mat-form-field class="example-full-width">
-        <mat-label>Ingrediants</mat-label>
-        <input matInput placeholder="Ingrediants" [formControlName]="i" />
+        <mat-label>Ingredients</mat-label>
+        <input matInput placeholder="Ingredients" [formControlName]="i" />
         <mat-error *ngIf="ingredient?.hasError('required')">Required</mat-error>
       </mat-form-field>
       <button

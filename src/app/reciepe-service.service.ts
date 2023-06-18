@@ -25,7 +25,19 @@ export class ReciepeServiceService {
   Fav: Recipe[] = [];
 
   addToFav(val: Recipe) {
-    this.Fav.push(val);
+    let index = this.Fav.indexOf(val);
+    let check = false;
+    for (let i = 0; i < this.Fav.length; i++) {
+      // console.log(this.Fav[i].id);
+      if (this.Fav[i].id == val.id) {
+        check = true;
+      }
+    }
+    if (!check) {
+      this.Fav.push(val);
+    } else {
+      alert('Already in Favorites');
+    }
 
     console.log(val);
   }

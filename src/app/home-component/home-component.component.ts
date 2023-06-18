@@ -67,6 +67,7 @@ export class HomeComponentComponent {
     );
   }
   addToFav(val: any) {
+    console.log(this.rec.Fav.indexOf(val));
     this.rec.addToFav(val);
   }
 

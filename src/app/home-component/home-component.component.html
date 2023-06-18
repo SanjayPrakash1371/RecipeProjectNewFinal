@@ -8,11 +8,12 @@
         </ul> -->
 
         <div>
+          <a mat-button [routerLink]="''" style="font-size: 18px"> HOME </a>
           <a mat-button [routerLink]="'add'" style="font-size: 18px">
-            Add Reciepe
+            ADD RECIEPE
           </a>
           <a mat-button [routerLink]="'favo'" style="font-size: 18px">
-            View Favorites
+            FAVORITES
           </a>
         </div>
       </mat-toolbar-row>
@@ -21,7 +22,11 @@
   <div class="search-field">
     <form [formGroup]="searchForm">
       <mat-form-field class="example-full-width">
-        <input matInput placeholder="Search" formControlName="searchField" />
+        <input
+          matInput
+          placeholder="Eg:egg,tomato"
+          formControlName="searchField"
+        />
         <mat-icon matPrefix class="my-icon">search</mat-icon>
       </mat-form-field>
 

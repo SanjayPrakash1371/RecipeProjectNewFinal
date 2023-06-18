@@ -1,9 +1,23 @@
 <div class="recipe-container">
   <img class="recipe-poster" [src]="recipe.imglink" [alt]="recipe.name" />
   <div class="recipe-spec">
-    <h2>{{ recipe.name | uppercase }}</h2>
-    <!-- <p>⭐ {{ recipe.instructions }}</p> -->
+    <h2
+      style="
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+          'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      "
+    >
+      {{ recipe.name | uppercase }}
+    </h2>
   </div>
+  <h3
+    style="
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+        'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    "
+  >
+    Preparation Time : 😋{{ recipe.preptime }} mins
+  </h3>
   <div class="recipe-spec">
     <button mat-raised-button type="button" (click)="details(recipe.id)">
       Details

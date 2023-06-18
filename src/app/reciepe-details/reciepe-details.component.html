@@ -11,6 +11,20 @@
   <div style="text-align: center">
     <img class="recipe-poster" [src]="recipe?.imglink" />
   </div>
+  <div class="buttons-spec">
+    <button
+      mat-raised-button
+      color="primary"
+      type="button"
+      [disabled]="fav"
+      (click)="addToFav(recipe)"
+    >
+      <mat-icon>favorite</mat-icon>Favorite
+    </button>
+    <button mat-raised-button type="button" (click)="edit(recipe.id)">
+      Edit
+    </button>
+  </div>
 
   <div class="recipe-spec">
     <p>
@@ -29,7 +43,7 @@
   <div class="recipe-ingrediants">
     <span style="color: rgb(15, 26, 185); font-weight: bold">Ingrediants</span>
     <ul *ngFor="let ing of recipe?.ingredients">
-      <li>{{ ing }}</li>
+      <li>{{ ing | uppercase }}</li>
     </ul>
   </div>
 </div>
