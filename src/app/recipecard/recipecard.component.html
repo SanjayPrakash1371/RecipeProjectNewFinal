@@ -2,7 +2,10 @@
   <img class="movie-poster" [src]="recipe.imglink" [alt]="recipe.name" />
   <div class="movie-spec">
     <h2>{{ recipe.name }}</h2>
-    <p>⭐ {{ recipe.instructions }}</p>
+    <!-- <p>⭐ {{ recipe.instructions }}</p> -->
     <button (click)="details(recipe.id)">Details</button>
+    <button (click)="addToFav(recipe)">Fav</button>
+    <button (click)="edit(recipe.id)">Edit</button>
+    <button (click)="deleteRecipe(recipe.id)">Delete</button>
   </div>
 </div>

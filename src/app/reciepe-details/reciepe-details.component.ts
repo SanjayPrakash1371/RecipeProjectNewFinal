@@ -5,7 +5,7 @@ import { catchError, pipe } from 'rxjs';
 interface Recipe {
   id: string;
   name: string;
-  ingredients: string;
+  ingredients: string[];
   imglink: string;
   instructions: string;
   servingsize: number;
@@ -25,6 +25,7 @@ export class ReciepeDetailsComponent {
   recipe: any;
   imgSrc: string = '';
   summary: string = '';
+  r!: Recipe;
   ngOnInit() {
     this.arouter.paramMap.subscribe((router) => {
       let receipeId = router.get('id');
@@ -42,9 +43,12 @@ export class ReciepeDetailsComponent {
           // console.log(val);
 
           this.recipe = val;
-          console.log(this.recipe['id'], 'sanjay');
-          this.imgSrc = this.recipe['img'];
-          this.summary = this.recipe['instructions'];
+          this.r = this.recipe;
+          this.imgSrc = this.r?.imglink;
+          console.log(this.r.imglink);
+
+          // console.log(this.recipe['id'], 'sanjay');
+          // this.imgSrc = this.recipe['img'];
         });
     });
   }

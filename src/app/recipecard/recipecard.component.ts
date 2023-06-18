@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Router } from '@angular/router';
+import { ReciepeServiceService } from '../reciepe-service.service';
 
 @Component({
   selector: 'app-recipecard',
@@ -18,10 +19,27 @@ export class RecipecardComponent {
     servingsize: 2,
     preptime: 30,
   };
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private reciepeService: ReciepeServiceService
+  ) {}
 
   details(id: string) {
     console.log(id);
     this.router.navigate([`/recipe/${id}`]);
+  }
+  addToFav(val: any) {
+    this.reciepeService.addToFav(val);
+  }
+
+  edit(id: string) {
+    this.router.navigate([`/edit/${id}`]);
+  }
+
+  @Output() delete = new EventEmitter<string>();
+  deleteRecipe(id: string) {
+    console.log('Emitting');
+
+    this.delete.emit(id);
   }
 }

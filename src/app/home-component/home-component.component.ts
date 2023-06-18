@@ -7,6 +7,7 @@ import {
   distinctUntilChanged,
   switchMap,
 } from 'rxjs';
+import { ReciepeServiceService } from '../reciepe-service.service';
 
 @Component({
   selector: 'app-home-component',
@@ -16,7 +17,11 @@ import {
 export class HomeComponentComponent {
   title = 'rproject';
 
-  constructor(private fb: FormBuilder, private http: HttpClient) {}
+  constructor(
+    private fb: FormBuilder,
+    private http: HttpClient,
+    private rec: ReciepeServiceService
+  ) {}
 
   searchForm = this.fb.group({
     searchField: [''],
@@ -25,13 +30,12 @@ export class HomeComponentComponent {
   reciepes: any;
 
   show = false;
-  allRec: any;
+  allRec$: any;
   ngOnInit() {
-    this.http
-      .get(`https://648a951717f1536d65e94e9e.mockapi.io/recieps`)
-      .subscribe((val) => {
-        this.allRec = val;
-      });
+    this.allRec$ = this.http.get(
+      `https://648a951717f1536d65e94e9e.mockapi.io/recieps`
+    );
+
     this.searchForm
       .get('searchField')
       ?.valueChanges.pipe(
@@ -43,8 +47,8 @@ export class HomeComponentComponent {
       .subscribe((val: any) => {
         this.show = true;
         this.reciepes = val;
-        console.log(val);
-        console.log(this.reciepes);
+        //  console.log(val);
+        //  console.log(this.reciepes);
       });
   }
 
@@ -55,5 +59,17 @@ export class HomeComponentComponent {
       ` https://648a951717f1536d65e94e9e.mockapi.io/recieps?ingredients=${receipe}`
     );
   }
-  addToFav(val: any) {}
+  addToFav(val: any) {
+    this.rec.addToFav(val);
+  }
+
+  deleteReciepe(id: string) {
+    this.allRec$ = this.rec.delete(id).subscribe(() => {
+      this.http
+        .get(`https://648a951717f1536d65e94e9e.mockapi.io/recieps`)
+        .subscribe((val) => {
+          //this.allRec = val;
+        });
+    });
+  }
 }

@@ -1,3 +1,8 @@
 <p>reciepe-details works!{{ recipe }}</p>
-<img [src]="imgSrc" />
-<p>{{ summary }}</p>
+<img class="movie-poster" [src]="recipe?.imglink" />
+<p>{{ recipe?.instructions }}</p>
+<p>Ingrediants</p>
+<ul *ngFor="let ing of recipe?.ingredients">
+  <li>{{ ing }}</li>
+</ul>
+<p>Preparation time : {{ recipe?.preptime }}</p>

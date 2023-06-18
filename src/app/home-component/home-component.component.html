@@ -1,24 +1,42 @@
-<nav>
-  <ul class="nav-links">
-    <li><a routerLink="favo">Favorites</a></li>
-  </ul>
+<div>
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <!-- <ul class="nav-links">
+        <li><a routerLink="favo">Favorites</a></li>
+        <li><a routerLink="add">Add Reciepe</a></li>
+      </ul> -->
+
+      <div>
+        <a mat-button [routerLink]="'add'"> Add Reciepe </a>
+        <a mat-button [routerLink]="'favo'"> View Favorites </a>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>
+<div class="search-field">
   <form [formGroup]="searchForm">
-    <input matInput placeholder="Recipe" formControlName="searchField" />
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Search" formControlName="searchField" />
+      <mat-icon matPrefix class="my-icon">search</mat-icon>
+    </mat-form-field>
+
     <br />
   </form>
-  <div *ngIf="!show">
-    <ul *ngFor="let r of allRec">
-      <li>
-        <app-recipecard [recipe]="r"></app-recipecard>
-      </li>
-    </ul>
+</div>
+
+<div>
+  <div class="reciepe-list-container" *ngIf="!show">
+    <app-recipecard
+      (delete)="deleteReciepe($event)"
+      *ngFor="let r of allRec$ | async"
+      [recipe]="r"
+    ></app-recipecard>
   </div>
-  <div *ngIf="show">
-    <ul *ngFor="let r of reciepes">
-      <li>{{ r.name }}</li>
-      <!-- <li>{{ r.id }}</li> -->
-      <app-recipecard [recipe]="r"></app-recipecard>
-    </ul>
+  <div class="reciepe-list-container" *ngIf="show">
+    <app-recipecard
+      (delete)="deleteReciepe($event)"
+      *ngFor="let r of reciepes"
+      [recipe]="r"
+    ></app-recipecard>
   </div>
-</nav>
-<router-outlet></router-outlet>
+</div>

@@ -1,0 +1,48 @@
+.reciepe-list-container {
+   
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .nav-links{
+    display: flex;
+   list-style: none;
+   gap: 77px;
+  }
+  
+  .mat-tab-group {
+    margin-bottom: 48px;
+  }
+  .example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+   
+  }
+  
+  .example-full-width {
+   
+   width: 100%;
+   // border-radius: 50%;
+  //   margin-left: 150px;
+  //   margin-right: 150px;
+    
+  }
+  .search-field{
+
+    display: flex;
+  gap: 10px;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+
+
+  
+  
+ 
+  
+  padding: 10px;
+ 
+
+  }

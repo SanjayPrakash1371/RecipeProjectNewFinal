@@ -1,0 +1,76 @@
+<form
+  [formGroup]="recipeEditedForm"
+  class="example-form"
+  (ngSubmit)="onSubmit()"
+>
+  <div>
+    <mat-form-field class="example-full-width">
+      <mat-label>Recipe Name</mat-label>
+      <input matInput placeholder="Recipe Name" formControlName="name" />
+
+      <mat-error *ngIf="name?.hasError('required')">Required</mat-error>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field class="example-full-width">
+      <mat-label>Poster</mat-label>
+      <input matInput placeholder="Url" formControlName="imglink" />
+      <mat-error *ngIf="imglink?.hasError('required')">Url Required</mat-error>
+      <mat-error *ngIf="imglink?.hasError('pattern')">Invalid Url</mat-error>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field class="example-full-width">
+      <mat-label>Instruction</mat-label>
+      <input
+        matInput
+        placeholder="Instruction"
+        formControlName="instructions"
+      />
+      <mat-error *ngIf="instructions?.hasError('required')">Required</mat-error>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field class="example-full-width">
+      <mat-label>Preptime</mat-label>
+      <input matInput placeholder="Preptime" formControlName="preptime" />
+      <mat-error *ngIf="preptime?.hasError('required')">Required</mat-error>
+    </mat-form-field>
+  </div>
+
+  <div formArrayName="ingredients">
+    <div *ngFor="let ingredient of ingredientsControls; let i = index">
+      <mat-form-field class="example-full-width">
+        <mat-label>Ingrediants</mat-label>
+        <input matInput placeholder="Ingrediants" [formControlName]="i" />
+        <mat-error *ngIf="ingredient?.hasError('required')">Required</mat-error>
+      </mat-form-field>
+      <button
+        mat-raised-button
+        color="primary"
+        type="button"
+        (click)="addIngredients()"
+      >
+        ADD ingredients
+      </button>
+      <button
+        mat-raised-button
+        color="primary"
+        type="button"
+        (click)="removeIngredient(i)"
+      >
+        Remove
+      </button>
+    </div>
+
+    <div></div>
+  </div>
+  <button
+    mat-raised-button
+    color="primary"
+    type="submit"
+    [disabled]="!recipeEditedForm.valid"
+  >
+    Submit
+  </button>
+</form>
