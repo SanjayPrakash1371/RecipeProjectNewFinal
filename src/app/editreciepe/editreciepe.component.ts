@@ -36,6 +36,7 @@ export class EditreciepeComponent {
 
   id: string = '';
   ngOnInit() {
+    let ingredientsArray: string[] = [];
     this.arouter.paramMap.subscribe((router) => {
       let reciepeId = router.get('id');
 
@@ -46,13 +47,20 @@ export class EditreciepeComponent {
           this.id = val.id;
 
           this.recipeEditedForm.patchValue(val);
+          // console.log(val.ingredients);
+          ingredientsArray = val.ingredients;
+          for (let i = 0; i < ingredientsArray.length; i++) {
+            console.log(ingredientsArray[i]);
+            const control = new FormControl(
+              ingredientsArray[i],
+              Validators.required
+            );
+            (<FormArray>this.recipeEditedForm.get('ingredients')).push(control);
+          }
 
-         // console.log(this.recipeEditedForm.get('ingredients')?.value.length);
+          // console.log(this.recipeEditedForm.get('ingredients')?.value.length);
         });
     });
-
-    const control = new FormControl('', Validators.required);
-    (<FormArray>this.recipeEditedForm.get('ingredients')).push(control);
   }
   onSubmit() {
     this.reciepeService
