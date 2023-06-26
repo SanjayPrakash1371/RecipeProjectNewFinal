@@ -22,7 +22,19 @@ interface Recipe {
 export class ReciepeServiceService {
   constructor(private http: HttpClient) {}
 
-  Fav: Recipe[] = [];
+  Fav: Recipe[] = [
+    {
+      ingredients: ['Cocunt', 'Chilly', 'Salt'],
+      imglink:
+        'https://www.holidify.com/blog/wp-content/uploads/2015/11/640px-Coconut_Chutney.jpg',
+      instructions:
+        ' It is made with grounded coconut, dry red chilly (particularly roasted red chilly) ginger, mustard seed and served cold along with the dishes such as Dosa, Idli, Vada. It tastes delicious and the coconut gives it a flavour that perfectly balances out with all the other dishes.',
+      servingsize: 2,
+      preptime: 10,
+      id: '122',
+      name: 'Cocunt Chutney',
+    },
+  ];
 
   addToFav(val: Recipe) {
     let index = this.Fav.indexOf(val);

@@ -1,7 +1,11 @@
 <!-- <p>reciepe-details works!{{ recipe }}</p> -->
+<div></div>
 <div>
   <mat-toolbar color="primary">
     <mat-toolbar-row>
+      <div>
+        <a mat-button [routerLink]="''" style="font-size: 18px"> HOME </a>
+      </div>
       <h1 style="margin: 0 auto">{{ recipe?.name | uppercase }}</h1>
     </mat-toolbar-row>
   </mat-toolbar>

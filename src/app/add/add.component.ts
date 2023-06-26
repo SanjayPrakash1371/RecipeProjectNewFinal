@@ -52,6 +52,10 @@ export class AddComponent {
     (<FormArray>this.recipeForm.get('ingredients')).push(control);
   }
   removeIngredient(index: number) {
+    if (index == 0) {
+      alert('Add atleast one ingrediants');
+      return;
+    }
     const control = new FormControl(null, Validators.required);
     (<FormArray>this.recipeForm.get('ingredients')).removeAt(index);
   }
