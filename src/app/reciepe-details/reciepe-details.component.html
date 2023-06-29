@@ -1,7 +1,7 @@
 <!-- <p>reciepe-details works!{{ recipe }}</p> -->
 <div></div>
 <div>
-  <mat-toolbar color="primary">
+  <mat-toolbar color="basic">
     <mat-toolbar-row>
       <div>
         <a mat-button [routerLink]="''" style="font-size: 18px"> HOME </a>
@@ -11,7 +11,7 @@
   </mat-toolbar>
 </div>
 
-<div style="background-color: rgb(219, 227, 234)">
+<div style="background-color: rgb(255, 255, 255)">
   <div style="text-align: center">
     <img class="recipe-poster" [src]="recipe?.imglink" />
   </div>
@@ -45,7 +45,7 @@
     </p>
   </div>
   <div class="recipe-ingrediants">
-    <span style="color: rgb(15, 26, 185); font-weight: bold">Ingrediants</span>
+    <span style="color: rgb(15, 26, 185); font-weight: bold">Ingredients</span>
     <ul *ngFor="let ing of recipe?.ingredients">
       <li>{{ ing | uppercase }}</li>
     </ul>

@@ -1,5 +1,5 @@
 <div>
-  <mat-toolbar color="primary">
+  <mat-toolbar color="warn">
     <mat-toolbar-row>
       <div>
         <a mat-button [routerLink]="''" style="font-size: 18px"> HOME </a>
@@ -63,7 +63,8 @@
         type="button"
         (click)="addIngredients()"
       >
-        ADD ingredients
+        <mat-icon>exposure_plus_1</mat-icon>
+        <!-- ADD ingredients -->
       </button>
       <button
         mat-raised-button
@@ -71,7 +72,7 @@
         type="button"
         (click)="removeIngredient(i)"
       >
-        Remove
+        <mat-icon>delete</mat-icon>
       </button>
     </div>
 
